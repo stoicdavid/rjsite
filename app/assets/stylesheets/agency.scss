@@ -222,7 +222,9 @@ fieldset[disabled] .btn-xl.active {
 }
 @media (min-width: 768px) {
   .navbar-custom.affix {
-    background-color: #222222;
+
+	background-color: rgba(0, 0, 0, 0.7);
+	
     padding: 10px 0;
   }
   .navbar-custom.affix .navbar-brand {
@@ -429,6 +431,17 @@ section h3.section-subheading {
   color: white;
   border-radius: 100%;
   border: 7px solid #f1f1f1;
+  text-align: center;
+}
+.timeline-image2 {
+  left: 10px;
+  margin-bottom:10px;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+
+  border-radius: 100%;
+  
   text-align: center;
 }
 .timeline > li .timeline-image h4 {
