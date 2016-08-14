@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Has recibido una solicitud de cotización de <%= @user.name %></h1>
+    <p>
+		Estos son los datos para realizarla<br>
+		
+      Necesidad de tu cliente: <%= @user.message %><br><br>
+	  Estos son los datos del cliente:
+	  Nombre: <%= @user.name %><br>
+	  Correo:<%= @user.email %> <br>
+	  Teléfono(s):<%= @user.phone %> <br>
+    </p>
+
+    <p>Buen día.</p>
+  </body>
+</html>

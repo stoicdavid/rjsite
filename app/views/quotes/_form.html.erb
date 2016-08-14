@@ -1,0 +1,57 @@
+
+<% flash.each do |name, msg| %>
+  <div class="alert alert-<%= name == :notice ? "success" : "error" %>">
+    <a class="close" data-dismiss="alert">×</a>
+    <%= msg %>
+  </div>
+<% end %>
+
+<%= form_for quote, html:{name:"sentMessage", id:"contactForm"} do |f| %>
+
+<div class="row">
+  <% if quote.errors.any? %>
+    <div id="alert">
+      <h2><%= pluralize(quote.errors.count, "error") %> prohibited this quote from being saved:</h2>
+
+      <ul>
+      <% quote.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+	<div class="col-md-6">
+	    <div class="form-group">	  
+			<%= f.text_field :name, placeholder:"Tu nombre *", class:"form-control" %>  
+		  	<p class="help-block text-danger"></p>
+	    </div>
+	
+	    <div class="form-group">	  
+			<%= f.text_field :email, placeholder:"Tu e-Mail *", class:"form-control" %>  
+		  	<p class="help-block text-danger"></p>
+	    </div>
+	
+	    <div class="form-group">	  
+			<%= f.text_field :phone, placeholder:"Tu teléfono *", class:"form-control" %>  
+		  	<p class="help-block text-danger"></p>
+	    </div>
+	
+	</div>
+
+    <div class="col-md-6">
+        <div class="form-group">
+			<%= f.text_area :message, placeholder:"Tus necesidades *", class:'form-control' %>
+            <p class="help-block text-danger"></p>
+        </div>
+    </div>
+	
+    <div class="clearfix"></div>
+    <div class="col-lg-12 text-center">
+        <div id="success"></div>
+		    <%= f.submit "ENVIAR",class:'btn btn-xl' %>
+
+			<% end -%>
+    </div>
+			
+</div>
