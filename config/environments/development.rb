@@ -38,14 +38,15 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
   
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     address:              'smtp.gmail.com',
     port:                 587,
-    domain:               'RJMuebles.com',
-    user_name:            'stoicdavid@gmail.com',
-    password:             'life719110',
+    domain:               'rjmueblesparacomercio.com',
+    user_name:            'cotizaciones@rjmueblesparacomercio.com',
+    password:             'dorian54720',
     authentication:       'plain',
     enable_starttls_auto: true  }
   
